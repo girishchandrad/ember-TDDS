@@ -25,6 +25,8 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.apiURL = "http://localhost:3000";
+    ENV.host = 'http://localhost:4200';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
