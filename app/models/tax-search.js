@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  jurisdiction: DS.attr('string,'),
+  jurisdiction: DS.attr('string'),
   entityType: DS.attr('string'),
   formNameDescription: DS.attr('string'),
   formName: DS.attr('string'),
