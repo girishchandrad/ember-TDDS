@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('tax-searches', {path: '/tax-searches'});
+  this.route('tax-searches', function(){
+    this.route('show', {path: ':taxSearch_id'});
+  });
 });
 
 export default Router;
