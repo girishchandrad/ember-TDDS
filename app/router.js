@@ -10,8 +10,8 @@ Router.map(function() {
   this.route('tax-searches',function(){
     this.route('index',{ path: '' } )
   });
-  this.route('form', { path: '/tax-searches/:taxSearch_id' });
-
+  // route forms is not connected to backend yet
+  this.route('forms');
 });
 
 export default Router;
