@@ -12,6 +12,7 @@ Router.map(function() {
   });
   // route forms is not connected to backend yet
   this.route('forms');
+  this.route('fullsearchview');
 });
 
 export default Router;

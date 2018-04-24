@@ -3,6 +3,8 @@
   <!-- All four break tags will be removed once section height is override  -->
   <br />
   <br />
+  <br />
+  <br />
   <div class="d-flex align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
     <div><img class="pull-left img-thumbnail " src="images/firm_initials.png">
       <span class="display-5 font-weight-bold text-muted " >TAX DUE DATE SEARCH</span></div>
@@ -16,9 +18,8 @@
         </div>
       </form>
     </div>
-  <br />
-  <br />
 </section>
+
 
 <div class="container" id="content">
   <div class="row h-100 mt-5">
@@ -28,6 +29,10 @@
     <div>
       {{#link-to "forms"}}
         Link to show form html- To be deleted after Juan's review
+      {{/link-to}}
+      <br />
+      {{#link-to "fullsearchview"}}
+        Link to fullsearchview form html- To be deleted after Juan's review
       {{/link-to}}
     </div>
   </div>
