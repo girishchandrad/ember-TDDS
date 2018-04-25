@@ -10,6 +10,7 @@ module.exports = function(defaults) {
   });
   app.import('bower_components/bootstrap/dist/js/bootstrap.js');
   app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+  app.import('bower_components/components-font-awesome/css/font-awesome.css');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
