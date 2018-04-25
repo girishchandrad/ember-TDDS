@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('taxsearch/taxsearch-item-list', 'Integration | Component | taxsearch/taxsearch item list', {
+moduleForComponent('taxsearch/taxsearch-items', 'Integration | Component | taxsearch/taxsearch items', {
   integration: true
 });
 
@@ -10,15 +10,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{taxsearch/taxsearch-item-list}}`);
+  this.render(hbs`{{taxsearch/taxsearch-items}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#taxsearch/taxsearch-item-list}}
+    {{#taxsearch/taxsearch-items}}
       template block text
-    {{/taxsearch/taxsearch-item-list}}
+    {{/taxsearch/taxsearch-items}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');

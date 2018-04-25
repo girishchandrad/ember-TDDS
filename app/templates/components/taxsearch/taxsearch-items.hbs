@@ -1,0 +1,39 @@
+
+<section id="search">
+  <!-- All four break tags will be removed once section height is override  -->
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="d-flex align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
+    <div><img class="pull-left img-thumbnail " src="images/firm_initials.png">
+      <span class="display-5 font-weight-bold text-muted " >TAX DUE DATE SEARCH</span></div>
+      <br />
+      <form>
+        <div class="input-group">
+          <input type="text" class="form-control search shadow p-3 mb-5 bg-white rounded" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-light shadow p-3 mb-5 bg-white rounded" type="button">Go!</button>
+          </span>
+        </div>
+      </form>
+    </div>
+</section>
+
+
+<div class="container" id="content">
+  <div class="row h-100 mt-5">
+    <main class="col-md-6">
+      <h1>Content...</h1>
+    </main>
+    <div>
+      {{#link-to "forms"}}
+        Link to show form html- To be deleted after Juan's review
+      {{/link-to}}
+      <br />
+      {{#link-to "fullsearchview"}}
+        Link to fullsearchview form html- To be deleted after Juan's review
+      {{/link-to}}
+    </div>
+  </div>
+</div>

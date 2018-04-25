@@ -7,9 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('tax-searches', function(){
-    this.route('show', {path: ':taxSearch_id'});
+  this.route('tax-searches',function(){
+    this.route('index',{ path: '' } )
   });
+  // route forms is not connected to backend yet
+  this.route('forms');
+  this.route('fullsearchview');
 });
 
 export default Router;
