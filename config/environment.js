@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = function(environment) {
@@ -25,8 +24,6 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.apiURL = "http://localhost:3000";
-    ENV.host = 'http://localhost:4200';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -43,10 +40,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
-
+    // here you can enable a production-specific feature
   }
 
   return ENV;
