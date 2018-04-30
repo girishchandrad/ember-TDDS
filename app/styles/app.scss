@@ -1,1 +1,24 @@
 @import 'site-layouts';
+
+.centereddiv {
+  // background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.displayfont {
+  font-size: 35px;
+  padding: 20px;
+}
+.displaylogo {
+  padding: 50px;
+}
+
+.landing-searchbar-size {
+    height: 45px;
+
+
+}
