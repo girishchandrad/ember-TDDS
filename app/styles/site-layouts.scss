@@ -1,3 +1,22 @@
+$app-qgreen: rgba(98,144,128,0.25);
+$app-halfgreen: rgba(98,144,128,0.5);
+
+.search-button {
+  background-color: $app-halfgreen;
+}
+
+.text-icon {
+  text-decoration-color: $app-qgreen;
+}
+.logo-icon {
+  align-items:flex-start;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+
+
+
 @import './site-views/initial-search';
 @import './site-views/search-list';
 @import './site-views/form-view';
