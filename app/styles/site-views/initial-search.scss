@@ -1,9 +1,33 @@
+$app-qgreen: rgba(98,144,128,0.25);
+$app-halfgreen: rgba(98,144,128,0.5);
 
-.initial-search {
-  margin: 10px;
 
+
+.centereddiv {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width:auto;
+  // background-color: #000;
 }
 
-.initial-search-form {
-  padding-top: 20px;
+.text-icon {
+  text-decoration-color: $app-qgreen;
+}
+.logo-icon {
+  align-items:flex-start;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+
+.landing-toprow {
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.search-button {
+  background-color: $app-halfgreen;
 }
