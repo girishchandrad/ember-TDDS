@@ -1,12 +1,16 @@
-<section>
-  <div class="d-flex align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
-    <div>
-      {{#link-to 'index'}}<img class="pull-left img-thumbnail " src="images/firm_initials.png">{{/link-to}}
-      <span class="display-5 font-weight-bold text-muted " >TAX DUE DATE SEARCH</span>
+
+<div class="d-flex  logo-frame-form align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
+  <div class="container centereddiv-form">
+    <div class="row justify-content-center align-items-center landing-toprow">
+      <div class="col-sm-1.5">
+      {{#link-to "index"}}<img class="logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}/firm_initials.png">{{/link-to}}
+      </div>
+      <div class="col-sm-10.5">
+          <h2 class="text-muted text-icon font-weight-bold text-left">TAX DUE DATE SEARCH</h2>
+      </div>
     </div>
-      <br />
   </div>
-</section>
+</div>
 
 <div class="container custom-locale-form align-items-right">
   <h4 class="font-weight-bold text-muted">
@@ -72,7 +76,7 @@
     </div>
   </form>
 </div>
-<footer class="blockquote-footer">
+<footer class="footer-form">
   <div class="container custom-locale-form align-items-right">
     <p class="text-muted">
       The information contained in this site is general in nature and should not be considered to be legal, tax, accounting, consulting or any other professional advice.

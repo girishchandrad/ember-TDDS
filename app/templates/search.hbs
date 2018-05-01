@@ -1,18 +1,27 @@
 <section id="header">
-  <div class="d-flex align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
-    <div>
-      {{#link-to 'index'}}<img class="logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">{{/link-to}}
-      <span class="display-5 font-weight-bold text-muted " >TAX DUE DATE SEARCH</span>
-    </div>
-      <br />
-      <form>
-        <div class="input-group">
-          <input type="text" class="form-control search shadow p-3 mb-5 bg-white rounded" placeholder="PA-20S">
-          <span class="input-group-btn">
-            <button class="btn btn-light shadow p-3 mb-5 bg-white rounded" type="button">Go!</button>
-          </span>
+  <div class="d-flex  align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
+    <div class="container centereddiv-list">
+      <div class="row justify-content-center align-items-center landing-toprow">
+        <div class="col-sm-1.5">
+          {{#link-to "index"}}<img class="logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">{{/link-to}}
         </div>
-      </form>
+        <div class="col-sm-10.5">
+            <h2 class="text-muted text-icon font-weight-bold text-left">TAX DUE DATE SEARCH</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <form>
+            <div class="input-group">
+              <input type="text" class="form-control search shadow-sm  rounded" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-light shadow-sm rounded search-button" type="button">{{#link-to "search"}}Search!{{/link-to}}</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
       <div class="container">
        <div class="row">
          <div class="dropdown col-sm-1">
@@ -89,7 +98,7 @@
 
 <br />
 <!-- annoying line to be removed -->
-<footer class="blockquote-footer">
+<footer class="footer-list" >
   <div class="container custom-locale-form align-items-right">
     <p class="text-muted">
       The information contained in this site is general in nature and should not be considered to be legal, tax, accounting, consulting or any other professional advice.
