@@ -3,21 +3,21 @@ $app-halfgreen: rgba(98,144,128,0.5);
 $app-lightgray: rgb(239,239,239);
 
 .centerdiv-list-wrapper {
-  background-color: rgb(239,239,239);
+  background-color: $app-lightgray;
 }
 
 .centereddiv-list {
 
   height: auto;
   width:auto;
-  // background-color: #000;
+
 }
 
 .centereddiv-list-dropdown {
   height: auto;
   width: auto;
   align-content: left;
-  // background-color: #000;
+
 
 }
 
