@@ -1,77 +1,74 @@
 
-<div class="d-flex  logo-frame-form align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
-  <div class="container centereddiv-form">
-    <div class="row justify-content-center align-items-center landing-toprow">
-      <div class="col-sm-1.5">
+<div class="d-flex centerdiv-form-wrapper logo-frame-form  flex-column h-100 shadow-sm p-3 mb-5 bg-white rounded">
+  <div class="container ">
       {{#link-to "index"}}<img class="logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}/firm_initials.png">{{/link-to}}
-      </div>
-      <div class="col-sm-10.5">
-          <h2 class="text-muted text-icon font-weight-bold text-left">TAX DUE DATE SEARCH</h2>
-      </div>
-    </div>
   </div>
 </div>
 
 <div class="container custom-locale-form align-items-right">
   <h4 class="font-weight-bold text-muted">
-    Connecticut (CT) - Form 20C
+    {{model.jurisdiction}}-{{model.name}}
   </h4>
   <br />
   <form >
     <div class="form-group row">
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">Jurisdiction:</label>
       <div class="col-sm-4">
-        <span class="font-italic">Connecticut (CT)</span>
+        <span class="ffont-italic text-info text-info">{{model.jurisdiction}}</span>
       </div>
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">Entity Type:</label>
       <div class="col-sm-4">
-        <span class="font-italic">Corporation</span>
+        <span class="ffont-italic text-info">{{model.entityType}}</span>
       </div>
     </div>
     <div class="form-group row">
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">Form Name Description:</label>
       <div class="col-sm-4">
-          <span class="font-italic">Corporation Business Tax Return</span>
+          <span class="ffont-italic text-info">{{model.desc}}</span>
       </div>
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">Form Name:</label>
       <div class="col-sm-4">
-        <span class="font-italic">CT-1120</span>
+        <span class="ffont-italic text-info">{{model.name}}</span>
       </div>
     </div>
     <div class="form-group row">
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">Form Link:</label>
       <div class="col-sm-4">
-        <span class="font-italic">#</span>
+        <span class="ffont-italic text-info">{{model.link}}</span>
       </div>
-      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Supplemental:</label>
-      <div class="col-sm-4">
-        <span class="font-italic">#</span>
-      </div>
-    </div>
-    <div class="form-group row">
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">Instructions Link:</label>
       <div class="col-sm-4">
-        <span class="font-italic">#</span>
+        <span class="ffont-italic text-info">{{model.instructionsLink}}</span>
       </div>
+    </div>
+    <div class="form-group row">
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Allowed:</label>
       <div class="col-sm-4">
-        <span class="font-italic">Yes</span>
+        <span class="ffont-italic text-info">{{model.efileRrequiredDesc}}</span>
       </div>
-    </div>
-    <div class="form-group row">
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Required:</label>
       <div class="col-sm-4">
-        <span class="font-italic">Yes</span>
-      </div>
-      <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Explanation:</label>
-      <div class="col-sm-4">
-        <span class="font-italic">Must be filed electronically</span>
+        <span class="ffont-italic text-info">{{model.efileAllowedDesc}}</span>
       </div>
     </div>
     <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Due Date:</label>
+      <div class="col-sm-4">
+        <span class="ffont-italic text-info">{{model.dd}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Due Date Fiscal:</label>
+      <div class="col-sm-4">
+        <span class="ffont-italic text-info">{{model.fiscalDdDesc}}</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Extension Due Date:</label>
+      <div class="col-sm-4">
+        <span class="ffont-italic text-info">{{model.extDd}}</span>
+      </div>
       <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Authorization Name:</label>
       <div class="col-sm-4">
-        <span class="font-italic">N/A</span>
+        <span class="ffont-italic text-info">{{model.fiscalExtDdDesc}}</span>
       </div>
     </div>
   </form>

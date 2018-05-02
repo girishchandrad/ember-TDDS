@@ -2,19 +2,19 @@ $app-qgreen: rgba(98,144,128,0.25);
 $app-halfgreen: rgba(98,144,128,0.5);
 
 .search-button {
-  background-color: $app-halfgreen;
+  color: $app-halfgreen;
 }
 
 .text-icon {
   text-decoration-color: $app-qgreen;
-}
-.logo-icon {
-  align-items:flex-start;
-  margin-right: 10px;
-  margin-bottom: 5px;
+  font-size: 31.5px;
+
 }
 
 
+.search-input {
+  width:350px !important;
+}
 
 
 @import './site-views/initial-search';
