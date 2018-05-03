@@ -1,6 +1,8 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  checkRoute: service(),
   model(){
     return {"id":"110",
     "jurisdiction":"California (CA)",
@@ -16,5 +18,6 @@ export default Route.extend({
     "extDd":"09/15/2018",
     "fiscalExtDdDesc":"Five months after fiscal year end"}
   }
+
 
 });

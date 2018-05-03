@@ -1,6 +1,8 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  checkRoute: service(),
   data: [{"id":"110",
   "jurisdiction":"California (CA)","entity-type":"Fiduciaries","desc":"California Fiduciary Income Tax Return ","name":"541","link":"https://www.ftb.ca.gov/forms/2017/17_541.pdf#","instructions-link":"https://www.ftb.ca.gov/forms/2017/17_541bk.pdf","efile-allowed":null,"efile-required":null,"efile-required-desc":"Yes","efile-allowed-desc":"Depends","dd":"04/15/2018","fiscal-dd-desc":"California e-file Return Authorization for Fiduciaries ","ext-dd":"09/15/2018","fiscal-ext-dd-desc":" ","created-at":"2018-05-02T14:22:04.128Z","updated-at":"2018-05-02T14:22:04.128Z"},
   {"id":"111",
@@ -24,5 +26,10 @@ export default Route.extend({
 
   model(){
     return   this.get('data')
+  },
+
+  beforeModel(){
+    this.get('checkRoute').setCurrentRoute(false);
   }
+
 });
