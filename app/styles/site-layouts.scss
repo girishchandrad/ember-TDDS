@@ -1,20 +1,10 @@
-$app-qgreen: rgba(98,144,128,0.25);
-$app-halfgreen: rgba(98,144,128,0.5);
+@import './site-views/constants';
 
 .search-button {
   color: $app-halfgreen;
 }
 
-.text-icon {
-  text-decoration-color: $app-qgreen;
-  font-size: 31.5px;
 
-}
-
-
-.search-input {
-  width:350px !important;
-}
 
 
 @import './site-views/initial-search';

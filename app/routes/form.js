@@ -1,8 +1,6 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
 
 export default Route.extend({
-  checkRoute: service(),
   model(){
     return {"id":"110",
     "jurisdiction":"California (CA)",

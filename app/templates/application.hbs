@@ -1,4 +1,4 @@
-{{#if checkRouteName}}
+{{#if (eq currentRouteName 'index')}}
   <div class="container centereddiv ">
     <div class="row landing-toprow">
       <div class="col-sm-12">
@@ -18,4 +18,6 @@
       </div>
   </div>
 {{/if}}
+
+
 {{outlet}}

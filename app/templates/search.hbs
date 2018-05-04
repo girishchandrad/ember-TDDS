@@ -1,7 +1,7 @@
 
 <div class="d-flex centerdiv-list-wrapper align-items-center flex-column justify-content-center h-100 shadow-sm p-3 mb-5 bg-white rounded">
   <div class="container centereddiv-list">
-    <div class="row list-toprow">
+    <div class="row">
       <div class="col-sm-12">
         {{#link-to "index"}}<img class="list-logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">{{/link-to}}
         <span class="text-muted list-text-icon  text-left">TAX DUE DATE SEARCH</span>
@@ -10,7 +10,7 @@
     <div class="row">
       <form>
         <div class="input-group col-sm-12">
-          <input type="text" class="form-control search mb-5  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
+          <input type="text" class="form-control search list-search-input mb-5  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
           <span class="input-group-btn">
             {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-5 bg-white rounded search-button" type="button">Search!</button>{{/link-to}}
           </span>
@@ -18,9 +18,9 @@
       </form>
      </div>
   </div>
-  <div class="container  centereddiv-list-dropdown">
+  <div class="container centerdiv-dropdown-container">
       <div class="row align-items-center">
-        <div class="dropdown col-sm-6">
+        <div class="dropdown col-sm-3">
           <button class="btn btn-light btn-sm  list-dropdown shadow  mb-5 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Type
           </button>
@@ -30,7 +30,7 @@
             <a class="dropdown-item" href="#">Corporations</a>
           </div>
         </div>
-        <div class="dropdown  col-sm-6">
+        <div class="dropdown  col-sm-3">
           <button class="btn btn-light btn-sm  list-dropdown shadow  mb-5 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             State
           </button>
@@ -54,7 +54,7 @@
          <li class="text-primary list-listitems">
            <span class="list-listitem-span">Name: {{search.name}}</span>
            <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
-           <span class="list-listitem-span">Due Date: {{search.dd}}</span>
+           <span class="list-listitem-span-dd">Due Date: {{search.dd}}</span>
          </li>
          {{/link-to}}
         {{/each}}

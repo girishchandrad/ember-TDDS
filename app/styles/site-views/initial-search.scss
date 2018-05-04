@@ -1,5 +1,4 @@
-$app-qgreen: rgba(98,144,128,0.25);
-$app-halfgreen: rgba(98,144,128,0.5);
+@import './constants.scss';
 
 .centereddiv {
   position: absolute;
@@ -9,28 +8,28 @@ $app-halfgreen: rgba(98,144,128,0.5);
   height: auto;
   width: auto;
   align-content: left;
-
-  // background-color: #000;
 }
 
 .landing-toprow {
-  margin-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: $top-row-margin;
 }
 
 .landing-logo-icon {
   align-items:flex-start;
-  margin-right: 12px;
-  margin-bottom: 10px;
-  width: 10.9%;
+  margin-right: $logo-margin-right;
+  margin-bottom: $logo-margin-bottom;
+  width: $logo-margin-width;
 }
 
 .landing-text-icon {
   text-decoration-color: $app-qgreen;
-  font-size: 31.5px;
-
+  font-size: $logo-text-icon-fontsize;
 }
 
 .landing-search-input {
-  width:350px !important;
+  width:$search-input-width
+}
+
+.landing-search-input-btn {
+  text-decoration-color: $app-qgreen;
 }

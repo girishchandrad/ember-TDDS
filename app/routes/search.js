@@ -1,8 +1,7 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
 
 export default Route.extend({
-  checkRoute: service(),
+
   data: [{"id":"110",
   "jurisdiction":"California (CA)","entity-type":"Fiduciaries","desc":"California Fiduciary Income Tax Return ","name":"541","link":"https://www.ftb.ca.gov/forms/2017/17_541.pdf#","instructions-link":"https://www.ftb.ca.gov/forms/2017/17_541bk.pdf","efile-allowed":null,"efile-required":null,"efile-required-desc":"Yes","efile-allowed-desc":"Depends","dd":"04/15/2018","fiscal-dd-desc":"California e-file Return Authorization for Fiduciaries ","ext-dd":"09/15/2018","fiscal-ext-dd-desc":" ","created-at":"2018-05-02T14:22:04.128Z","updated-at":"2018-05-02T14:22:04.128Z"},
   {"id":"111",
@@ -23,13 +22,7 @@ export default Route.extend({
   "jurisdiction":"California (CA)","entity-type":"Partnership","desc":"Partnership Return of Income ","name":"565","link":"https://www.ftb.ca.gov/forms/2017/17_565.pdf#","instructions-link":"https://www.ftb.ca.gov/forms/2017/17_565bk.pdf","efile-allowed":null,"efile-required":null,"efile-required-desc":"Yes","efile-allowed-desc":"Depends","dd":"04/15/2018","fiscal-dd-desc":"A partnership must file Form 565 and pay the $800 annual tax (if required) by the 15th day of the 3rd month (fiscal year)","ext-dd":"09/15/2018","fiscal-ext-dd-desc":"7 months - If a partnership needs more time to file Form 565 by the return’s due date, the partnership is granted an automatic seven month extension.","created-at":"2018-05-02T14:22:05.621Z","updated-at":"2018-05-02T14:22:05.621Z"},
   {"id":"333",
   "jurisdiction":"California (CA)","entity-type":"S-Corp","desc":"California S Corporation Franchise or Income Tax Return ","name":"100-S","link":"https://www.ftb.ca.gov/forms/2017/17_100s.pdf#","instructions-link":"https://www.ftb.ca.gov/forms/2017/17_100sbk.pdf","efile-allowed":null,"efile-required":null,"efile-required-desc":"Yes","efile-allowed-desc":"Depends","dd":"04/15/2018","fiscal-dd-desc":"File Form 100S by the 15th day of the 3rd month after the close of the taxable year unless the return is for a short-period as required under R\u0026TC Section 24634","ext-dd":"09/15/2018","fiscal-ext-dd-desc":"it may file on or before the 15th day of the 9th month without filing a written request for an extension","created-at":"2018-05-02T14:22:06.020Z","updated-at":"2018-05-02T14:22:06.020Z"}],
-
   model(){
-    return   this.get('data')
+    return   this.get('data');
   },
-
-  beforeModel(){
-    this.get('checkRoute').setCurrentRoute(false);
-  }
-
 });

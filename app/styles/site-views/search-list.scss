@@ -1,24 +1,38 @@
-$app-qgreen: rgba(98,144,128,0.25);
-$app-halfgreen: rgba(98,144,128,0.5);
-$app-lightgray: rgb(239,239,239);
+@import './constants.scss';
 
 .centerdiv-list-wrapper {
   background-color: $app-lightgray;
 }
 
-.centereddiv-list {
+.list-logo-icon {
+  align-items:flex-start;
+  margin-right: $logo-margin-right;
+  margin-bottom: $logo-margin-bottom;
+  width: $logo-margin-width;
+}
 
+.list-text-icon {
+  text-decoration-color: $app-qgreen;
+  font-size: $logo-text-icon-fontsize;
+}
+
+.list-search-input {
+  width:$search-input-width
+}
+
+.centereddiv-list {
   height: auto;
   width:auto;
+}
 
+.centerdiv-dropdown-container {
+  height: $centerdiv-dropdown-container-height;
 }
 
 .centereddiv-list-dropdown {
   height: auto;
   width: auto;
   align-content: left;
-
-
 }
 
 .list-footer {
@@ -26,23 +40,6 @@ $app-lightgray: rgb(239,239,239);
   margin-top: 20px;
 }
 
-.list-toprow {
-  margin-top: 5px;
-
-}
-
-.list-logo-icon {
-  align-items:flex-start;
-  margin-right: 5px;
-  margin-bottom: 5px;
-
-}
-
-.list-text-icon {
-  text-decoration-color: $app-qgreen;
-  font-size: 22px;
-
-}
 
 .list-dropdown {
       border-radius: 40px;
@@ -68,8 +65,8 @@ $app-lightgray: rgb(239,239,239);
   padding: 2px;
 }
 
+
 .list-listitem-container {
-  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -77,4 +74,11 @@ $app-lightgray: rgb(239,239,239);
 .list-listitem-span {
   margin-right: 25px;
   font-size: 15px;
+}
+
+.list-listitem-span-dd {
+  margin-right: 25px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: yellow;
 }
