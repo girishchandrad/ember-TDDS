@@ -1,12 +1,4 @@
 @import './site-views/constants';
-
-.search-button {
-  color: $app-halfgreen;
-}
-
-
-
-
 @import './site-views/initial-search';
 @import './site-views/search-list';
 @import './site-views/form-view';

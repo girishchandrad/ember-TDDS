@@ -1,6 +1,6 @@
 @import './constants.scss';
 
-.centereddiv {
+.centerdiv-wrapper {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -12,24 +12,30 @@
 
 .landing-toprow {
   margin-bottom: $top-row-margin;
+
+  .landing-logo-icon {
+    align-items:flex-start;
+    margin-right: $logo-margin-right;
+    margin-bottom: $logo-margin-bottom;
+    width: $logo-margin-width;
+  }
+
+  .landing-text-icon {
+    text-decoration-color: $app-qgreen;
+    font-size: $logo-text-icon-fontsize;
+  }
 }
 
-.landing-logo-icon {
-  align-items:flex-start;
-  margin-right: $logo-margin-right;
-  margin-bottom: $logo-margin-bottom;
-  width: $logo-margin-width;
-}
+.landing-bottomrow {
+  .landing-search-input {
+    width:$search-input-width
+  }
 
-.landing-text-icon {
-  text-decoration-color: $app-qgreen;
-  font-size: $logo-text-icon-fontsize;
-}
+  .landing-search-input-btn {
+    text-decoration-color: $app-qgreen;
+  }
 
-.landing-search-input {
-  width:$search-input-width
-}
-
-.landing-search-input-btn {
-  text-decoration-color: $app-qgreen;
+  .landing-search-button {
+    color: $search-button-darkgreen;
+  }
 }

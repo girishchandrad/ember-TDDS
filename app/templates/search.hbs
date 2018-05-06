@@ -1,6 +1,6 @@
 
 <div class="d-flex centerdiv-list-wrapper align-items-center flex-column justify-content-center h-100 shadow-sm p-3 mb-5 bg-white rounded">
-  <div class="container centereddiv-list">
+  <div class="container centerdiv-list-display">
     <div class="row">
       <div class="col-sm-12">
         {{#link-to "index"}}<img class="list-logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">{{/link-to}}
@@ -12,7 +12,7 @@
         <div class="input-group col-sm-12">
           <input type="text" class="form-control search list-search-input mb-5  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
           <span class="input-group-btn">
-            {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-5 bg-white rounded search-button" type="button">Search!</button>{{/link-to}}
+            {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-5 bg-white rounded list-search-button" type="button">Search!</button>{{/link-to}}
           </span>
         </div>
       </form>
@@ -44,14 +44,14 @@
   </div>
 </div>
 
-<div class="container">
-      <div class="text-muted list-count-text  text-left">40 results</div>
-  <div class="container list-listitem-container">
+<div class="container list-listitems-pagination-container">
+  <div class="text-muted list-count-text  text-left">40 results</div>
+  <div class="container">
     <div class="row">
       <ul class="col-sm-8 list-unstyled">
         {{#each model as |search|}}
          {{#link-to 'form' search.id}}
-         <li class="text-primary list-listitems">
+         <li class="text-primary">
            <span class="list-listitem-span">Name: {{search.name}}</span>
            <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
            <span class="list-listitem-span-dd">Due Date: {{search.dd}}</span>
@@ -61,7 +61,7 @@
       </ul>
     </div>
   </div>
-  <div class="container">
+  <div class="container pagination-container">
     <div class="row">
       <span class="col-sm-12">
         <nav aria-label="Page navigation example">
@@ -82,9 +82,7 @@
   </div>
 </div>
 
-<br />
-
-<footer class="list-footer" >
+<footer class="app-footer" >
   <div class="container custom-locale-form align-items-right">
     <p class="text-muted">
       The information contained in this site is general in nature and should not be considered to be legal, tax, accounting, consulting or any other professional advice.
