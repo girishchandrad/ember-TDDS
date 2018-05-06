@@ -1,31 +1,31 @@
 @import './constants.scss';
 
-.centerdiv-list-wrapper {
+.center-list-wrapper {
   background-color: $app-lightgray;
-}
 
-.centerdiv-list-display {
-  height: auto;
-  width:auto;
+  .center-list-display {
+    height: auto;
+    width:auto;
 
-  .list-logo-icon {
-    align-items:flex-start;
-    margin-right: $logo-margin-right;
-    margin-bottom: $logo-margin-bottom;
-    width: $logo-margin-width;
-  }
+    .list-logo-icon {
+      align-items:flex-start;
+      margin-right: $logo-margin-right;
+      margin-bottom: $logo-margin-bottom;
+      width: $logo-margin-width;
+    }
 
-  .list-text-icon {
-    text-decoration-color: $app-qgreen;
-    font-size: $logo-text-icon-fontsize;
-  }
+    .list-text-icon {
+      text-decoration-color: $app-qgreen;
+      font-size: $logo-text-icon-fontsize;
+    }
 
-  .list-search-input {
-    width:$search-input-width
-  }
+    .list-search-input {
+      width:$search-input-width
+    }
 
-  .list-search-button {
-    color: $search-button-darkgreen;
+    .list-search-button {
+      color: $search-button-darkgreen;
+    }
   }
 }
 
