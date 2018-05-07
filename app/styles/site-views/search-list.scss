@@ -53,6 +53,7 @@
      text-decoration-color: $app-qgreen;
      font-style: italic;
      margin-bottom: $list-spacing;
+     margin-left: 15px;
   }
 
   .list-listitem-span {
@@ -76,4 +77,5 @@
 .app-footer {
   font-size: $text-display-size;
   margin-top: $footer-display-margin-top;
+  margin-left: 15px;
 }
