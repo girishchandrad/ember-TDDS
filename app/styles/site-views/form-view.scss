@@ -1,0 +1,11 @@
+@import './constants.scss';
+
+.center-form-wrapper {
+  margin-top: $centereddiv-form-margin-top;
+  margin-bottom: $centereddiv-form-margin-bottom;
+}
+
+.app-footer {
+  font-size: $text-display-size;
+   margin-top: $footer-display-margin-top;
+}

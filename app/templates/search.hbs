@@ -1,0 +1,91 @@
+
+<div class="d-flex center-list-wrapper align-items-center flex-column justify-content-center  shadow-sm  mb-5 bg-white rounded">
+  <div class="container center-list-display">
+    <div class="row">
+      <div class="col-sm-12">
+        {{#link-to "index"}}<img class="list-logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">{{/link-to}}
+        <span class="text-muted list-text-icon  text-left">TAX DUE DATE SEARCH</span>
+      </div>
+    </div>
+    <div class="row">
+      <form>
+        <div class="input-group col-sm-12">
+          <input type="text" class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
+          <span class="input-group-btn">
+            {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>{{/link-to}}
+          </span>
+        </div>
+      </form>
+     </div>
+     <div class="row">
+       <div class="dropdown col-sm-6">
+         <button class="btn btn-light btn-sm  list-dropdown shadow   dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Type
+         </button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#">Partnership</a>
+           <a class="dropdown-item" href="#">Individuals</a>
+           <a class="dropdown-item" href="#">Corporations</a>
+         </div>
+       </div>
+       <div class="dropdown  col-sm-6">
+         <button class="btn btn-light btn-sm  list-dropdown shadow   dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           State
+         </button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#">Alabama</a>
+           <a class="dropdown-item" href="#">Florida</a>
+           <a class="dropdown-item" href="#">New York</a>
+         </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+<div class="container list-listitems-pagination-container">
+  <div class="text-muted list-count-text  text-left">40 results</div>
+  <div class="container">
+    <div class="row">
+      <ul class="col-sm-8 list-unstyled">
+        {{#each model as |search|}}
+         {{#link-to 'form' search.id}}
+         <li class="text-primary">
+           <span class="list-listitem-span">Name: {{search.name}}</span>
+           <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
+           <span class="list-listitem-span-dd">Due Date: {{search.dd}}</span>
+         </li>
+         {{/link-to}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="container pagination-container">
+    <div class="row">
+      <span class="col-sm-12">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </span>
+    </div>
+  </div>
+</div>
+
+<footer class="app-footer" >
+  <div class="container custom-locale-form align-items-right">
+    <p class="text-muted">
+      The information contained in this site is general in nature and should not be considered to be legal, tax, accounting, consulting or any other professional advice.
+      In all cases you should consult with professional advisors familiar with your particular factual situation for advice concerning specific matters before making any decisions.
+      Certain links on this site lead to sites maintained by individuals or organizations over which KRCo. has no control.
+    </p >
+  </div>
+</footer>

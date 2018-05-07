@@ -1,19 +1,23 @@
-<div style="height: 350px;">
-  <div class="d-flex align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
-    <div><img class="pull-left img-thumbnail " src="images/firm_initials.png">
-      <span class="display-5 font-weight-bold text-muted " >TAX DUE DATE SEARCH</span>
-    </div>
-    <br />
-    <form>
-      <div class="input-group">
-        <input type="text" class="form-control search shadow p-3 mb-5 bg-white rounded" placeholder="Search for...">
-        <span class="input-group-btn">
-          <button class="btn btn-light shadow p-3 mb-5 bg-white rounded" type="button">Go!</button>
-        </span>
+{{#if (eq currentRouteName 'index')}}
+  <div class="container center-landing-wrapper ">
+    <div class="row landing-toprow">
+      <div class="col-sm-12">
+        <img class="landing-logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">
+        <span class="text-muted landing-text-icon  text-left">TAX DUE DATE SEARCH</span>
       </div>
-    </form>
+    </div>
+    <div class="row landing-bottomrow">
+        <form>
+          <div class="input-group col-sm-12">
+            <input type="text" class="form-control search mb-5  landing-search-input border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
+            <span class="input-group-btn">
+              {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-5 bg-white rounded landing-search-button" type="button">Search!</button>{{/link-to}}
+            </span>
+          </div>
+        </form>
+      </div>
   </div>
-</div>
+{{/if}}
 
 
 {{outlet}}
