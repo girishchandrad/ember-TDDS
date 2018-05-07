@@ -1,5 +1,5 @@
 
-<div class="d-flex center-list-wrapper align-items-center flex-column justify-content-center h-100 shadow-sm p-3 mb-5 bg-white rounded">
+<div class="d-flex center-list-wrapper align-items-center flex-column justify-content-center  shadow-sm  mb-5 bg-white rounded">
   <div class="container center-list-display">
     <div class="row">
       <div class="col-sm-12">
@@ -10,37 +10,35 @@
     <div class="row">
       <form>
         <div class="input-group col-sm-12">
-          <input type="text" class="form-control search list-search-input mb-5  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
+          <input type="text" class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
           <span class="input-group-btn">
-            {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-5 bg-white rounded list-search-button" type="button">Search!</button>{{/link-to}}
+            {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>{{/link-to}}
           </span>
         </div>
       </form>
      </div>
-  </div>
-  <div class="container centerdiv-dropdown-container">
-      <div class="row align-items-center">
-        <div class="dropdown col-sm-3">
-          <button class="btn btn-light btn-sm  list-dropdown shadow  mb-5 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Type
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Partnership</a>
-            <a class="dropdown-item" href="#">Individuals</a>
-            <a class="dropdown-item" href="#">Corporations</a>
-          </div>
-        </div>
-        <div class="dropdown  col-sm-3">
-          <button class="btn btn-light btn-sm  list-dropdown shadow  mb-5 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            State
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Alabama</a>
-            <a class="dropdown-item" href="#">Florida</a>
-            <a class="dropdown-item" href="#">New York</a>
-          </div>
-        </div>
-     </div>
+     <div class="row">
+       <div class="dropdown col-sm-6">
+         <button class="btn btn-light btn-sm  list-dropdown shadow   dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Type
+         </button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#">Partnership</a>
+           <a class="dropdown-item" href="#">Individuals</a>
+           <a class="dropdown-item" href="#">Corporations</a>
+         </div>
+       </div>
+       <div class="dropdown  col-sm-6">
+         <button class="btn btn-light btn-sm  list-dropdown shadow   dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           State
+         </button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <a class="dropdown-item" href="#">Alabama</a>
+           <a class="dropdown-item" href="#">Florida</a>
+           <a class="dropdown-item" href="#">New York</a>
+         </div>
+       </div>
+    </div>
   </div>
 </div>
 
