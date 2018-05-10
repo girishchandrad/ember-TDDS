@@ -9,10 +9,10 @@
     <div class="row landing-bottomrow">
         <form>
           <div class="input-group col-sm-12">
-            <input type="text" class="form-control search mb-5  landing-search-input border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
-            <span class="input-group-btn">
+            {{input type="text" value=searchKeyLanding class="form-control  landing-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
+            <div class="input-group-btn">
               {{#link-to "searches"}}<button class="btn btn-light shadow-sm mb-5 bg-white rounded landing-search-button" type="button">Search!</button>{{/link-to}}
-            </span>
+            </div>
           </div>
         </form>
       </div>

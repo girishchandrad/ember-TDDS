@@ -1,22 +1,23 @@
 import Controller from '@ember/controller';
+import EmberObject, { computed } from '@ember/object';
+
 
 export default Controller.extend({
 
-  searchKey: '',
-  isSearchKeyBlank: Ember.computed.notEmpty('searchKey'),
-  queryParams: ['searchdata'],
-  paramsExist: Ember.computed('searchKey', function(){
-    return this.get('searchKey');
-  }),
-  resultLength: Ember.computed.alias('model.length'),
-
+searchKey: '',
+resultLength: computed.alias('model.length'),
+isSearchKeyBlank: computed.notEmpty('searchKey'),
+queryParams: ['searchdata'],
+ifParamsExist: computed('searchKey', function(){
+  return this.get('searchKey');
+}),
 
   actions: {
     setSearchParams(){
-      let paramsExist = this.get('paramsExist');
+      let ifParamsExist = this.get('ifParamsExist');
       let isSearchKeyBlank = this.get('isSearchKeyBlank');
       if (isSearchKeyBlank) {
-          this.set('searchdata', paramsExist);
+          this.set('searchdata', ifParamsExist);
       }
     },
     clearSearchParams(){

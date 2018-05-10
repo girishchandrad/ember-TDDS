@@ -1,4 +1,3 @@
-
 <div class="d-flex center-list-wrapper align-items-center flex-column justify-content-center  shadow-sm  mb-5 bg-white rounded">
   <div class="container center-list-display">
     <div class="row">
@@ -12,12 +11,9 @@
         <div class="input-group col-sm-12">
           {{input type="text" value=searchKey class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
           <span class="input-group-btn">
-            {{#unless searchdata}}
               <button {{action 'setSearchParams'}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>
-              {{else}}
-              <button {{action 'clearSearchParams'}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Clear Search!</button>
-            {{/unless}}
           </span>
+              <span class="list-clear" data-toggle="tooltip" title="Clear Search" {{action "clearSearchParams"}}><i class="fa fa-eraser" aria-hidden="true"></i></span>  
         </div>
       </form>
      </div>
@@ -47,41 +43,45 @@
 </div>
 
 <div class="container list-listitems-pagination-container">
-  <div class="text-muted list-count-text  text-left">40 results</div>
-  <div class="container">
-    <div class="row">
-      <ul class="col-sm-8 list-unstyled">
-        {{#each model as |search|}}
-         {{#link-to "form" search.id}}
-         <li class="text-primary">
-           <span class="list-listitem-span">Name: {{search.name}}</span>
-           <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
-           <span class="list-listitem-span-dd">Due Date: {{search.dd}}</span>
-         </li>
-         {{/link-to}}
-        {{/each}}
-      </ul>
+  {{#if resultLength}}
+    <div class="text-muted list-count-text  text-left">{{resultLength}} results</div>
+    <div class="container">
+      <div class="row">
+        <ul class="col-sm-8 list-unstyled">
+          {{#each model as |search|}}
+           {{#link-to "form" search.id}}
+           <li class="text-primary">
+             <span class="list-listitem-span">Name: {{search.name}}</span>
+             <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
+             <span class="list-listitem-span-dd">Due Date: {{search.dd}}</span>
+           </li>
+           {{/link-to}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="container pagination-container">
-    <div class="row">
-      <span class="col-sm-12">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-end">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
-      </span>
+    <div class="container pagination-container">
+      <div class="row">
+        <span class="col-sm-12">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </span>
+      </div>
     </div>
-  </div>
+    {{else}}
+  <div class="text-primary list-count-text  text-left">No Results Found</div>
+  {{/if}}
 </div>
 
 <footer class="app-footer" >

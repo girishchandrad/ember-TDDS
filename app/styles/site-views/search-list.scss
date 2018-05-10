@@ -28,6 +28,13 @@
       color: $search-button-darkgreen;
     }
 
+    .list-clear {
+        padding-left: 5px;
+        margin-top: 10px;
+        color: $search-button-darkgreen;
+        cursor: pointer;
+      }
+
     .list-dropdown {
       border-radius: $list-dropdown-border-radius;
       color: $list-dropdown-border-color;
