@@ -10,9 +10,13 @@
     <div class="row">
       <form>
         <div class="input-group col-sm-12">
-          <input type="text" class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for...">
+          {{input type="text" value=searchKey class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
           <span class="input-group-btn">
-            {{#link-to "search"}}<button class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>{{/link-to}}
+            {{#unless searchdata}}
+              <button {{action 'setSearchParams'}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>
+              {{else}}
+              <button {{action 'clearSearchParams'}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Clear Search!</button>
+            {{/unless}}
           </span>
         </div>
       </form>
@@ -48,7 +52,7 @@
     <div class="row">
       <ul class="col-sm-8 list-unstyled">
         {{#each model as |search|}}
-         {{#link-to 'form' search.id}}
+         {{#link-to "form" search.id}}
          <li class="text-primary">
            <span class="list-listitem-span">Name: {{search.name}}</span>
            <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
