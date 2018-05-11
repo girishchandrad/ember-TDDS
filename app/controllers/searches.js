@@ -4,10 +4,12 @@ import EmberObject, { computed } from '@ember/object';
 
 export default Controller.extend({
 
+jurisdiction: '',
+type: '',
 searchKey: '',
 resultLength: computed.alias('model.length'),
 isSearchKeyBlank: computed.notEmpty('searchKey'),
-queryParams: ['searchdata'],
+queryParams: ['searchdata', 'type', 'jurisdiction'],
 ifParamsExist: computed('searchKey', function(){
   return this.get('searchKey');
 }),
