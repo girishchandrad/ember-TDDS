@@ -7,13 +7,13 @@
       </div>
     </div>
     <div class="row">
-      <form>
+      <form {{action 'setSearchParams' searchvalue on='submit'}}>
         <div class="input-group col-sm-12">
-          {{input type="text" value=searchKey class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
+          {{input type="text" value=searchkey  class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
           <span class="input-group-btn">
-              <button {{action 'setSearchParams'}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>
+              <button class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>
           </span>
-              <span class="list-clear" data-toggle="tooltip" title="Clear Search" {{action "clearSearchParams"}}><i class="fa fa-eraser" aria-hidden="true"></i></span>  
+              <span class="list-clear" data-toggle="tooltip" title="Clear Search" {{action "clearSearchParams"}}><i class="fa fa-eraser" aria-hidden="true"></i></span>
         </div>
       </form>
      </div>
