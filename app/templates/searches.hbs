@@ -2,16 +2,16 @@
   <div class="container center-list-display">
     <div class="row">
       <div class="col-sm-12">
-        {{#link-to "index"}}<img class="list-logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">{{/link-to}}
+        <img class="list-logo-icon" alt="krinitial"  src="{{applicationState.rootURL}}firm_initials.png">
         <span class="text-muted list-text-icon  text-left">TAX DUE DATE SEARCH</span>
       </div>
     </div>
     <div class="row">
-      <form {{action 'setSearchParams' searchvalue on='submit'}}>
+      <form {{action 'setSearchParams' on='submit'}}>
         <div class="input-group col-sm-12">
-          {{input type="text" value=searchkey  class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
+          {{input type="text" value=keywordSearches  class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
           <span class="input-group-btn">
-              <button class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="button">Search!</button>
+              <button disabled={{isDisabled}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="submit">Search!</button>
           </span>
               <span class="list-clear" data-toggle="tooltip" title="Clear Search" {{action "clearSearchParams"}}><i class="fa fa-eraser" aria-hidden="true"></i></span>
         </div>

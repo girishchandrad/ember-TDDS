@@ -1,24 +1,28 @@
 import Controller from '@ember/controller';
 import EmberObject, { computed } from '@ember/object';
+import { oneWay } from '@ember/object/computed';
+import { empty } from '@ember/object/computed';
 
 
 export default Controller.extend({
  queryParams: ['searchkey'],
- keywordSearches: "",
+ searchkey:null,
+ keywordSearches: null,
  resultLength: computed.alias('model.length'),
- isSearchKeyBlank: computed.notEmpty('searchkey'),
- ifParamsExist: computed('searchkey', function(){
-  return this.get('searchkey');
-}),
+ searchKeyChange: computed('searchkey', function(){
+   return this.get('searchkey');
+ }),
+ keywordSearches: oneWay('searchKeyChange'),
+ isDisabled: empty('keywordSearches'),
 
   actions: {
     setSearchParams(){
-      let ifParamsExist = this.get('ifParamsExist');
-      let isSearchKeyBlank = this.get('isSearchKeyBlank');
-
+        let keywordSearches = this.get('keywordSearches');
+        this.set('searchkey', keywordSearches);
     },
     clearSearchParams(){
       this.set('searchkey', "");
+      this.set('keywordSearches', "");
     }
   }
 
