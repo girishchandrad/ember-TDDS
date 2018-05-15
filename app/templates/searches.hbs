@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="row">
-      <form {{action 'setSearchParams' on='submit'}}>
+      <form {{action 'setSearchParams' keywordSearches on='submit'}}>
         <div class="input-group col-sm-12">
           {{input type="text" value=keywordSearches  class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
           <span class="input-group-btn">
@@ -43,17 +43,17 @@
 </div>
 
 <div class="container list-listitems-pagination-container">
-  {{#if resultLength}}
-    <div class="text-muted list-count-text  text-left">{{resultLength}} results</div>
+  {{#if model.length}}
+    <div class="text-muted list-count-text  text-left">{{model.length}} results</div>
     <div class="container">
       <div class="row">
         <ul class="col-sm-8 list-unstyled">
-          {{#each model as |search|}}
-           {{#link-to "form" search.id}}
+          {{#each model as |taxSearch|}}
+           {{#link-to "form" taxSearch.id}}
            <li class="text-primary">
-             <span class="list-listitem-span">Name: {{search.name}}</span>
-             <span class="list-listitem-span">Jurisdiction: {{search.jurisdiction}}</span>
-             <span class="list-listitem-span-dd">Due Date: {{search.dd}}</span>
+             <span class="list-listitem-span">Name: {{taxSearch.name}}</span>
+             <span class="list-listitem-span">Jurisdiction: {{taxSearch.jurisdiction}}</span>
+             <span class="list-listitem-span-dd">Due Date: {{taxSearch.dd}}</span>
            </li>
            {{/link-to}}
           {{/each}}

@@ -17,9 +17,8 @@
   text-overflow:ellipsis;
   white-space:nowrap;
   display:inline-block;
-}
-
- .form-display-data span:hover{
-  cursor: pointer;
-  opacity: .25;
+    &:hover{
+     cursor: pointer;
+     opacity: .25;
+   }
 }

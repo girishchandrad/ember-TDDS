@@ -8,7 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('form', { path: 'form/:id' });
-  this.route('searches', { path: 'searches' });
+  this.route('searches');
 });
 
 export default Router;
