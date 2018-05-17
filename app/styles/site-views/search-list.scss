@@ -63,17 +63,16 @@
      margin-left: 15px;
   }
 
-  .list-listitem-span {
-    margin-right: $list-li-margin-right;
+  .list-listitem-td {
     font-size: $text-display-size;
+    cursor: pointer;
 
   }
 
-  .list-listitem-span-dd {
-    margin-right: $list-li-margin-right;
+  .list-listitem-td-dd {
     font-size: $text-display-size;
     font-weight: bold;
-    background-color: $list-li-background-color;
+
   }
 
   .pagination-container {

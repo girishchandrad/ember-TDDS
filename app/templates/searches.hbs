@@ -46,19 +46,24 @@
   {{#if model.length}}
     <div class="text-muted list-count-text  text-left">{{model.length}} results</div>
     <div class="container">
-      <div class="row">
-        <ul class="col-sm-8 list-unstyled">
-          {{#each model as |taxSearch|}}
-           {{#link-to "form" taxSearch.id}}
-           <li class="text-primary">
-             <span class="list-listitem-span">Name: {{taxSearch.name}}</span>
-             <span class="list-listitem-span">Jurisdiction: {{taxSearch.jurisdiction}}</span>
-             <span class="list-listitem-span-dd">Due Date: {{taxSearch.dd}}</span>
-           </li>
-           {{/link-to}}
-          {{/each}}
-        </ul>
-      </div>
+      <table class="table table-hover">
+        <thead >
+          <tr class="list-listitem-td">
+            <th scope="col" class="list-listitem-td">Name</th>
+            <th scope="col" class="list-listitem-td">Jurisdiction</th>
+            <th scope="col" class="list-listitem-td">Due Date</th>
+          </tr>
+        </thead>
+      {{#each model as |taxSearch|}}
+          <tbody>
+          <tr class="list-listitem-td" {{action "goToLink" taxSearch.id}}>
+            <td class="list-listitem-td" >{{taxSearch.name}}</td>
+            <td class="list-listitem-td">{{taxSearch.jurisdiction}}</td>
+            <td class="list-listitem-td-dd" >{{taxSearch.ddDate}}</td>
+          </tr>
+        </tbody>
+      {{/each}}
+      </table>
     </div>
     <div class="container pagination-container">
       <div class="row">

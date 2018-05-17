@@ -17,6 +17,9 @@ export default Controller.extend({
     clearSearchParams(){
       this.set('search', "");
       this.set('keywordSearches', "");
+    },
+    goToLink(id) {
+      this.transitionToRoute('form', id);
     }
   }
 
