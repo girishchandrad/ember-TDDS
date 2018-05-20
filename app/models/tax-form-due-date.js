@@ -18,6 +18,9 @@ export default DS.Model.extend({
   fiscalExtDdDesc: DS.attr('string'),
 
   ddDate:computed("dd", function(){
-    return moment(this.get("dd")).format("MM-DD-YY");
+    return moment(this.get("dd")).format("MMMM Do YYYY");
+  }),
+  extDdDate:computed("dd", function(){
+    return moment(this.get("extDd")).format("MMMM Do YYYY");
   }),
 });
