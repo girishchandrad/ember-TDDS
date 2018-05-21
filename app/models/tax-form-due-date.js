@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import EmberObject, { computed } from '@ember/object';
+import EmberObject, { computed, observer } from '@ember/object';
 
 export default DS.Model.extend({
   jurisdiction: DS.attr('string'),
@@ -17,10 +17,12 @@ export default DS.Model.extend({
   extDd: DS.attr('date'),
   fiscalExtDdDesc: DS.attr('string'),
 
+
   ddDate:computed('dd', function(){
-    return moment(this.get("dd")).format("MMMM Do YYYY");
+    return moment(this.get('dd')).format("MMMM Do YYYY");
   }),
   extDdDate:computed('dd', function(){
-    return moment(this.get("extDd")).format("MMMM Do YYYY");
+    return moment(this.get('extDd')).format("MMMM Do YYYY");
   }),
+
 });

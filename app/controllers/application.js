@@ -6,5 +6,4 @@ export default Controller.extend({
   searchdata: null,
   isDisabled: empty("searchdata"),
   searchvalue: alias("searchdata")
-
 });

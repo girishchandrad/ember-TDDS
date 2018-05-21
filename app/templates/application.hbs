@@ -9,7 +9,7 @@
     <div class="row landing-bottomrow">
         <form {{action 'transitionToSearch' searchvalue on='submit'}}>
           <div class="input-group col-sm-12">
-            {{input type="text" value=searchdata class="form-control  landing-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search for..."}}
+            {{input type="text" value=searchdata class="form-control  landing-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search by Form Name, State or Entity Type"}}
             <div class="input-group-btn">
               {{#link-to "searches" (query-params search=searchdata)}}<button disabled={{isDisabled}} class="btn btn-light shadow-sm mb-5 bg-white rounded landing-search-button" type="submit">Search!</button>{{/link-to}}
             </div>
