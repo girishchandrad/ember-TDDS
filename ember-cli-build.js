@@ -22,5 +22,6 @@ module.exports = function(defaults) {
   app.import('node_modules/bootstrap/dist/css/bootstrap.min.css');
   app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.js');
   app.import('node_modules/bootstrap/dist/css/bootstrap-grid.min.css');
+  app.import('node_modules/moment/moment.js');
   return app.toTree();
 };

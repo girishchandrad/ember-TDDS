@@ -28,6 +28,13 @@
       color: $search-button-darkgreen;
     }
 
+    .list-clear {
+        padding-left: 5px;
+        margin-top: 10px;
+        color: $search-button-darkgreen;
+        cursor: pointer;
+      }
+
     .list-dropdown {
       border-radius: $list-dropdown-border-radius;
       color: $list-dropdown-border-color;
@@ -56,17 +63,16 @@
      margin-left: 15px;
   }
 
-  .list-listitem-span {
-    margin-right: $list-li-margin-right;
+  .list-listitem-td {
     font-size: $text-display-size;
+    cursor: pointer;
 
   }
 
-  .list-listitem-span-dd {
-    margin-right: $list-li-margin-right;
+  .list-listitem-td-dd {
     font-size: $text-display-size;
     font-weight: bold;
-    background-color: $list-li-background-color;
+
   }
 
   .pagination-container {

@@ -1,95 +1,78 @@
-<section id="header">
-  <div class="d-flex align-items-center flex-column justify-content-center h-100 shadow p-3 mb-5 bg-white rounded">
-    <div>
-      {{#link-to 'index'}}<img class="pull-left img-thumbnail " src="images/firm_initials.png">{{/link-to}}
-      <span class="display-5 font-weight-bold text-muted " >TAX DUE DATE SEARCH</span>
-    </div>
-      <br />
-      <form>
-        <div class="input-group">
-          <input type="text" class="form-control search shadow p-3 mb-5 bg-white rounded" placeholder="PA-20S">
-          <span class="input-group-btn">
-            <button class="btn btn-light shadow p-3 mb-5 bg-white rounded" type="button">Go!</button>
-          </span>
-        </div>
-      </form>
-      <div class="container">
-       <div class="row">
-         <div class="dropdown col-sm-1">
-           <button class="btn btn-primary" type="button">
-             All
-           </button>
-         </div>
-         <div class="dropdown col-sm-2">
-           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Select Type
-           </button>
-           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-             <a class="dropdown-item" href="#">Action</a>
-           </div>
-         </div>
-         <div class="dropdown col-sm-2">
-           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-             Select State
-           </button>
-           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-             <a class="dropdown-item" href="#">Action</a>
-           </div>
-         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container custom-locale-form align-items-right">
-  <h4 class="font-weight-bold text-muted">
-    Search Results:
-  </h4>
-  <br />
-  <div class="container">
-    <div class="row">
-      <ul class="col-sm-8 list-unstyled">
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-        <li class="text-info"><u><em>PA-20S NRC    Pennsylvania (PA)    Due Date: 04/15/2018</em></u></li>
-      </ul>
-    </div>
-    <br />
-    <br />
-  </div>
-  <div class="container">
-    <div class="row">
-      <span class="col-sm-1.5"><strong>Total Items:</strong></span>
-      <span class="col-sm-6 text-primary"><strong><mark>40</mark></strong></span>
-      <span class="col-sm-3">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-end">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
-      </span>
-    </div>
+<div class="d-flex center-form-wrapper  flex-column rounded">
+  <div class="container ">
+      {{#link-to "searches"}}<span class="text-muted   text-left">Back To Search</span>{{/link-to}}
   </div>
 </div>
 
-<br />
-<!-- annoying line to be removed -->
-<footer class="blockquote-footer">
+<div class="container form-display-truncate custom-locale-form align-items-right">
+  <h4 class="font-weight-bold text-muted">
+    {{model.jurisdiction}}-{{model.name}}
+  </h4>
+  <br />
+  <form class="form-display-data">
+    <div class="form-group  row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Due Date:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.ddDate}}>{{model.ddDate}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Entity Type:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.entityType}}>{{model.entityType}}</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Form Name Description:</label>
+      <div class="col-sm-4">
+          <span class="font-italic text-info" data-toggle="tooltip" title={{model.desc}}>{{model.desc}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Form Name:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.name}}>{{model.name}}</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Form Link:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.link}}>{{model.link}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Instructions Link:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.instructionsLink}}>{{model.instructionsLink}}</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Allowed:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.efileRrequiredDesc}}>{{model.efileRrequiredDesc}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Required:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.efileAllowedDesc}}>{{model.efileAllowedDesc}}</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Jurisdiction:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.jurisdiction}}>{{model.jurisdiction}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Due Date Fiscal:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.fiscalDdDesc}}>{{model.fiscalDdDesc}}</span>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">Extension Due Date:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.extDdDate}}>{{model.extDdDate}}</span>
+      </div>
+      <label for="" class="col-sm-2 form-control-label font-weight-bold ">E-File Authorization Name:</label>
+      <div class="col-sm-4">
+        <span class="font-italic text-info" data-toggle="tooltip" title={{model.fiscalExtDdDesc}}>{{model.fiscalExtDdDesc}}</span>
+      </div>
+    </div>
+  </form>
+</div>
+<footer class="app-footer">
   <div class="container custom-locale-form align-items-right">
     <p class="text-muted">
       The information contained in this site is general in nature and should not be considered to be legal, tax, accounting, consulting or any other professional advice.

@@ -9,3 +9,16 @@
   font-size: $text-display-size;
    margin-top: $footer-display-margin-top;
 }
+
+.form-display-truncate span{
+  position:relative;
+  width:300px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  display:inline-block;
+    &:hover{
+     cursor: pointer;
+     opacity: .25;
+   }
+}
