@@ -15,11 +15,10 @@ beforeModel(transition){
 },
 model(params){
   if (!params.search.length ||  params.search === undefined) {
-    return "";
+    return null;
   }
   else {
       return  this.store.query("tax-form-due-date", params);
-
   }
 },
 setupController(controller,model, params){
