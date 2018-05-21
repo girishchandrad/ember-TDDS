@@ -5,21 +5,21 @@ import { empty } from '@ember/object/computed';
 
 
 export default Controller.extend({
- queryParams: ['search'],
+ queryParams: ["search"],
  search:null,
  keywordSearches: null,
- isDisabled: empty('keywordSearches'),
+ isDisabled: empty("keywordSearches"),
 
   actions: {
     setSearchParams(keywordSearches){
-        this.set('search', keywordSearches);
+        this.set("search", keywordSearches);
     },
     clearSearchParams(){
-      this.set('search', "");
-      this.set('keywordSearches', "");
+      this.set("search", "");
+      this.set("keywordSearches", "");
     },
     goToLink(id) {
-      this.transitionToRoute('form', id);
+      this.transitionToRoute("form", id);
     }
   }
 

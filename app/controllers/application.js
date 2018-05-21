@@ -3,8 +3,8 @@ import { empty } from '@ember/object/computed';
 import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
-  searchdata: '',
-  isDisabled: empty('searchdata'),
-  searchvalue: alias('searchdata')
+  searchdata: null,
+  isDisabled: empty("searchdata"),
+  searchvalue: alias("searchdata")
 
 });
