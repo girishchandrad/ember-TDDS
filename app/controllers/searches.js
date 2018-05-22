@@ -5,17 +5,16 @@ import { empty } from '@ember/object/computed';
 export default Controller.extend({
 
 
-filterTypes: computed('model', function() {
-  console.log(this.get('model.meta'))
-  let list =  Array.from(Object.values(this.get('model.meta')));
-  console.log(list)
-  return list;
-}),
-
-
  queryParams: ["search", "pageNumber", "sortAscending"],
  sortAscending: true,
  pageNumber: 0,
+ pageBegin: computed("pageNumber", function(){
+   return this.get('pageNumber') + 1;
+ }),
+ pageEnd: computed("pageNumber","pageSize", function(){
+   return this.get('pageNumber') + 1 * this.get("pageSize");
+ }),
+
  pageSize: 2,
  search:null,
  taxSearches:null,
@@ -24,7 +23,7 @@ filterTypes: computed('model', function() {
  searchTypes: null,
  isDisabled: empty("keywordSearches"),
 
-pages: Ember.computed("model", function(){
+pages: computed("model", function(){
   var content = []
   var pages = []
   this.get('model').toArray().forEach(function(item) {
@@ -35,14 +34,15 @@ pages: Ember.computed("model", function(){
   }
   return pages;
 }),
-paginatedContent: Ember.computed('pages', 'pageNumber', function(){
+paginatedContent: computed('pages', 'pageNumber', function(){
+  console.log(this.get('pages'))
   return this.get('pages')[this.get('pageNumber')]
 }),
 
   actions: {
     setSearchParams(keywordSearches){
         this.set("search", keywordSearches);
-        console.log(this.get("pages"));
+        this.set('pageNumber', 0);
     },
     clearSearchParams(){
       this.set("search", "");
@@ -51,11 +51,6 @@ paginatedContent: Ember.computed('pages', 'pageNumber', function(){
     goToLink(id) {
       this.transitionToRoute("form", id);
     },
-    goToLinkPagination(index){
-      this.transitionToRoute("searches");
-      console.log(index);
-      this.set('pageNumber', index);
-    },
     previousPage: function(){
       if (this.get('pageNumber') > 0) {
         this.set('pageNumber', this.get('pageNumber') - 1);
@@ -63,9 +58,15 @@ paginatedContent: Ember.computed('pages', 'pageNumber', function(){
     },
     nextPage: function(){
       if (this.get('pageNumber') + 1 < this.get('pages.length')) {
-        this.set('pageNumber', this.get('pageNumber') - 1);
+        this.set('pageNumber', this.get('pageNumber') + 1);
       }
     },
+    beginPage: function(){
+      this.set('pageNumber', 0)
+    },
+    endPage: function(){
+      this.set('pageNumber', this.get('pages.length') - 1)
+    }
 
   }
 
