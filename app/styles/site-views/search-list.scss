@@ -78,6 +78,11 @@
   .pagination-container {
     margin-top: $list-spacing;
   }
+
+  .big-text {
+    font-weight: bold;
+    background-color: $app-qgreen;
+  }
 }
 
 .app-footer {
