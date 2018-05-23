@@ -21,7 +21,10 @@
     }
 
     .list-search-input {
-      width:$search-input-width
+      width:$search-input-width;
+      font-style: italic;
+      font-size: 15px;
+      text-decoration-color:$app-qgreen;
     }
 
     .list-search-button {
@@ -79,9 +82,9 @@
     margin-top: $list-spacing;
   }
 
-  .big-text {
-    font-weight: bold;
-    background-color: $app-qgreen;
+  .pagination-bar-text {
+    color: $search-button-darkgreen;
+    font-weight:400;
   }
 }
 

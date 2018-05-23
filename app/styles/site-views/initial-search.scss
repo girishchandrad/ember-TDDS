@@ -27,7 +27,10 @@
 
   .landing-bottomrow {
     .landing-search-input {
-      width:$search-input-width
+      width:$search-input-width;
+      font-style: italic;
+      font-size: 15px;
+      text-decoration-color:$app-qgreen;
     }
 
     .landing-search-input-btn {

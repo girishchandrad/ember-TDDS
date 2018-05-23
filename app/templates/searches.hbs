@@ -9,7 +9,7 @@
     <div class="row">
       <form {{action 'setSearchParams' keywordSearches on='submit'}}>
         <div class="input-group col-sm-12">
-          {{input type="text" value=keywordSearches  class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search by Form Name, State or Entity Type"}}
+          {{input type="text" value=keywordSearches  class="form-control search list-search-input mb-3  border-light shadow-sm  mb-5 bg-white rounded" placeholder="Search by form name, state, type"}}
           <span class="input-group-btn">
               <button disabled={{isDisabled}} class="btn btn-light shadow-sm mb-3 bg-white rounded list-search-button" type="submit">Search!</button>
           </span>
@@ -22,7 +22,7 @@
 
 <div class="container list-listitems-pagination-container">
   {{#if model.length}}
-    <div class="text-muted list-count-text  text-left">{{pageBegin}}-{{pageEnd}} of {{model.length}} results</div>
+    <div class="text-muted list-count-text  text-left">{{pageBegin}}-{{pageEnd}} of {{totalResults}} results</div>
     <div class="container">
       <table class="table table-hover">
         <thead >
@@ -33,7 +33,7 @@
             <th scope="col" class="list-listitem-td">Due Date</th>
           </tr>
         </thead>
-      {{#each paginatedContent as |taxSearch|}}
+      {{#each model as |taxSearch|}}
           <tbody>
           <tr class="list-listitem-td" {{action "goToLink" taxSearch.id}}>
             <td class="list-listitem-td" >{{taxSearch.name}}</td>
@@ -49,18 +49,18 @@
       <div class="row">
         <span class="col-sm-12">
           <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-end">
+            <ul class="pagination justify-content-end ">
               <li class="page-item text-muted  rounded"{{action 'beginPage'}}>
-                <a class="btn btn-light shadow-sm mb-3 bg-white rounded fa fa-angle-double-left" data-toggle="tooltip" title="Start" ><<</a>
+                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded fa fa-angle-double-left pagination-bar-text" data-toggle="tooltip" title="Start" disabled={{prevPageDisabled}} ></button>
               </li>
-              <li class="page-item  text-muted rounded{{if (eq 1 pageNumber) 'disabled'}}" {{action 'previousPage'}}>
-                <a class="btn btn-light shadow-sm mb-3 bg-white rounded" >Previous</a>
+              <li class="page-item  text-muted rounded" {{action 'previousPage'}}>
+                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded pagination-bar-text" disabled={{prevPageDisabled}}>Previous</button>
               </li >
               <li class="page-item text-muted rounded"{{action 'nextPage'}}>
-                <a class="btn btn-light shadow-sm mb-3 bg-white rounded" >Next</a>
+                <button class="btn btn-light shadow-sm mb-3 bg-white rounded pagination-bar-text" disabled={{nextPageDisabled}} >Next</button>
               </li>
               <li class="page-item"{{action 'endPage'}}>
-                <a class="btn btn-light shadow-sm mb-3 bg-white rounded fa fa-angle-double-right text-muted rounded" data-toggle="tooltip" title="End" ></a>
+                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded fa fa-angle-double-right pagination-bar-text" data-toggle="tooltip" title="Start" disabled={{nextPageDisabled}} ></button>
               </li>
             </ul>
           </nav>

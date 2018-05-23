@@ -4,6 +4,9 @@ export default Route.extend({
 queryParams:{
   search: {
     refreshModel: true
+  },
+  page: {
+    refreshModel: true
   }
 },
 
