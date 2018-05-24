@@ -4,7 +4,6 @@ import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
   searchdata: null,
-  isDisabled: empty("searchdata"),
-  searchvalue: alias("searchdata")
-
+  isDisabled: empty('searchdata'),
+  searchvalue: alias('searchdata')
 });

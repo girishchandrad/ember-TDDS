@@ -4,13 +4,16 @@ export default Route.extend({
 queryParams:{
   search: {
     refreshModel: true
+  },
+  page: {
+    refreshModel: true
   }
 },
 
 beforeModel(transition){
   let paramsExist = Object.keys(transition.queryParams).toString();
   if(!paramsExist.length  || paramsExist === undefined){
-    this.transitionTo("application");
+    this.transitionTo('application');
   }
 },
 model(params){
@@ -18,12 +21,12 @@ model(params){
     return null;
   }
   else {
-      return  this.store.query("tax-form-due-date", params);
+      return  this.store.query('tax-form-due-date', params);
   }
 },
 setupController(controller,model, params){
  this._super(...arguments);
- controller.set("keywordSearches",params.queryParams.search);
+ controller.set('keywordSearches',params.queryParams.search);
 },
 
 });

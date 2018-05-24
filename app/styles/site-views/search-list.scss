@@ -21,7 +21,8 @@
     }
 
     .list-search-input {
-      width:$search-input-width
+      width:$search-input-width;
+      text-decoration-color:$app-qgreen;
     }
 
     .list-search-button {
@@ -78,6 +79,16 @@
   .pagination-container {
     margin-top: $list-spacing;
   }
+
+  .pagination-bar-text {
+    color: $search-button-darkgreen;
+    font-weight:400;
+  }
+  button.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
 }
 
 .app-footer {
