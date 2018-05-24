@@ -51,16 +51,16 @@
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-end ">
               <li class="page-item text-muted  rounded"{{action 'beginPage'}}>
-                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded fa fa-angle-double-left pagination-bar-text" data-toggle="tooltip" title="Start" disabled={{prevPageDisabled}} ></button>
+                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded fa fa-angle-double-left pagination-bar-text {{if prevPageDisabled 'disabled'}}" data-toggle="tooltip" title="Start"  ></button>
               </li>
               <li class="page-item  text-muted rounded" {{action 'previousPage'}}>
-                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded pagination-bar-text" disabled={{prevPageDisabled}}>Previous</button>
+                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded pagination-bar-text {{if prevPageDisabled 'disabled'}}" >Previous</button>
               </li >
               <li class="page-item text-muted rounded"{{action 'nextPage'}}>
-                <button class="btn btn-light shadow-sm mb-3 bg-white rounded pagination-bar-text" disabled={{nextPageDisabled}} >Next</button>
+                <button class="btn btn-light shadow-sm mb-3 bg-white rounded pagination-bar-text {{if nextPageDisabled 'disabled'}}"  >Next</button>
               </li>
               <li class="page-item"{{action 'endPage'}}>
-                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded fa fa-angle-double-right pagination-bar-text" data-toggle="tooltip" title="Start" disabled={{nextPageDisabled}} ></button>
+                <button class="btn btn-light  shadow-sm mb-3 bg-white rounded fa fa-angle-double-right pagination-bar-text {{if nextPageDisabled 'disabled'}}" data-toggle="tooltip" title="Start" ></button>
               </li>
             </ul>
           </nav>

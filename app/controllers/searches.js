@@ -18,13 +18,15 @@ export default Controller.extend({
    if (this.get('page') === 0) {
      return this.get('page') + 1;
    }
-   return this.get('page') * 2 + 1;
+   return this.get('page') * 5 ;
  }),
- pageEnd: computed('pageBegin', 'metaData', function(){
-   if (this.get('pageBegin') === this.get('metaData.info.results')) {
-     return this.get('pageBegin')
+ pageEnd: computed('metaData', 'page', function(){
+   if (this.get('page') + 1 === this.get('metaData.info.total')) {
+     return this.get('metaData.info.results')
+   } else if (this.get('page') === 0) {
+     return this.get('page') + 5;
    }
-   return this.get('pageBegin') + 1;
+   return this.get('pageBegin') + 5;
  }),
  totalResults: computed('metaData', function(){
    return this.get('metaData.info.results')
